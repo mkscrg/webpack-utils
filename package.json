@@ -1,0 +1,47 @@
+{
+  "name": "webpack-utils",
+  "version": "0.0.0",
+  "description": "Chunks of handy build config",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkscrg/webpack-utils.git"
+  },
+  "scripts": {
+    "test": "cd test-project && rm -rf node_modules/webpack-utils && npm install && npm run -s build",
+    "lint": "eslint lib/*.js test-project/build.js"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-core": "^6.18.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "chalk": "^1.1.3",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-flowtype": "^2.24.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "flow-bin": "^0.33.0",
+    "html-webpack-plugin": "^2.24.0",
+    "lodash": "^4.16.4",
+    "memory-fs": "^0.3.0",
+    "mime": "^1.3.4",
+    "pluralize": "^3.0.0",
+    "postcss-loader": "^1.0.0",
+    "style-loader": "^0.13.1",
+    "text-table": "^0.2.0",
+    "webpack": "^1.13.2",
+    "yargs": "^6.3.0"
+  }
+}
+
+
