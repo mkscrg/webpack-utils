@@ -1,20 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 const wu = require('webpack-utils');
 
-// some utilites return complex objects, e.g. a loader and some config
-const {
-  loader: cssModulesLoader,
-  plugin: cssModulesPlugin,
-  postcssConfig,
-} = wu.cssModules({ outputFile: 'wutp.css' });
-const { preLoader: eslintPreLoader, config: eslintConfig } = wu.eslint();
-
 
 const moreFlowConfig = {
   ignore: [
     '<PROJECT_ROOT>/node_modules/webpack-utils/test-project/.*',
   ],
 };
+const moreEslintConfig = {
+  rules: {
+    'react/jsx-filename-extension': 2,
+  },
+};
+
+// some utilites return complex objects, e.g. a loader and some config
+const {
+  loader: cssModulesLoader,
+  plugin: cssModulesPlugin,
+  postcssConfig,
+} = wu.cssModules({ outputFile: 'wutp.css' });
+const { preLoader: eslintPreLoader, config: eslintConfig } = wu.eslint({ moreEslintConfig });
 
 wu.webpackMain(devMode => ({
   entry: './src/main.jsx',

@@ -1,24 +1,8 @@
 {
   "extends": "airbnb",
   "parser": "babel-eslint",
-  "plugins": ["flowtype"],
   "env": {
     "browser": false,
     "node": true
-  },
-  "rules": {
-    "flowtype/define-flow-type": 2,
-    "flowtype/space-after-type-colon": [2, 'always'],
-    "flowtype/space-before-type-colon": [2, 'never'],
-    "flowtype/type-id-match": [2, '^([A-Z][a-z0-9]+)+(Type|Props|State|Context)$'],
-    "flowtype/use-flow-type": 2,
-    "flowtype/valid-syntax": 2,
-    "no-unused-vars": [2, {
-      "vars": "all",
-      "varsIgnorePattern": "^_",
-      "args": "all",
-      "argsIgnorePattern": "^_"
-    }],
-    "react/require-extension": 0
   }
 }
