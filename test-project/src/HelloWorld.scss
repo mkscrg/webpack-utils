@@ -1,4 +1,7 @@
 .HelloWorld {
   background: lightgreen;
   font-style: italic;
+  &:hover {
+    background: pink;
+  }
 }

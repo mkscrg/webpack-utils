@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import styles from './HelloWorld.css';
+import styles from './HelloWorld.scss';
 
 
 export default class HelloWorld extends React.Component<void, {}, void> {
