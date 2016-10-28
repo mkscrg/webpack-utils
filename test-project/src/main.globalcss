@@ -1,0 +1,3 @@
+.bold-hover:hover {
+  font-weight: bold;
+}

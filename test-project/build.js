@@ -15,9 +15,9 @@ const moreEslintConfig = {
 
 // some utilites return complex objects, e.g. a loader and some config
 const {
-  loader: cssModulesLoader,
-  plugin: cssModulesPlugin,
-  postcssConfig,
+  plugin: cssPlugin,
+  modulesLoader: cssModulesLoader,
+  globalLoader: cssGlobalLoader,
 } = wu.cssModules({ outputFile: 'wutp.css' });
 const { preLoader: eslintPreLoader, config: eslintConfig } = wu.eslint({ moreEslintConfig });
 
@@ -37,10 +37,11 @@ wu.webpackMain(devMode => ({
     loaders: [
       wu.babelJsLoader(),
       cssModulesLoader,
+      cssGlobalLoader,
     ],
   },
   plugins: [
-    cssModulesPlugin,
+    cssPlugin,
     wu.flowPlugin({ moreFlowConfig }),
     wu.indexHtmlPlugin({ title: 'webpack-utils Test Project', rootDivId: 'wutp' }),
     ...(devMode ? [] : [
@@ -48,7 +49,6 @@ wu.webpackMain(devMode => ({
     ]),
   ],
   eslint: eslintConfig,
-  postCss: postcssConfig,
   devtool: 'sourcemap',
   devServer: {
     port: 8888,

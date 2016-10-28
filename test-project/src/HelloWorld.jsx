@@ -10,7 +10,7 @@ export default class HelloWorld extends React.Component<void, {}, void> {
   }
   render() {
     return (
-      <span className={styles.HelloWorld}>{HelloWorld.mkContent()}</span>
+      <span className={`${styles.HelloWorld} bold-hover`}>{HelloWorld.mkContent()}</span>
     );
   }
 }
