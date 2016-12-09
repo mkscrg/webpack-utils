@@ -8,8 +8,9 @@
     "url": "https://github.com/mkscrg/webpack-utils.git"
   },
   "scripts": {
-    "test": "cd test-project && rm -rf node_modules/webpack-utils && npm install && npm run -s build",
-    "lint": "eslint lib/*.js test-project/build.js"
+    "lint": "eslint lib/*.js test-project-*/build.js",
+    "test-browser": "cd test-project-browser && rm -rf node_modules/webpack-utils && npm install && npm run -s build",
+    "test-node": "cd test-project-node && rm -rf node_modules/webpack-utils && npm install && npm run -s build"
   },
   "main": "lib/index.js",
   "dependencies": {

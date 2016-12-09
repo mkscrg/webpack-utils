@@ -1,0 +1,21 @@
+{
+  "name": "webpack-utils-test-project-browser",
+  "version": "0.0.0",
+  "description": "webpack-utils test project (browser)",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkscrg/mkscrg/tree/webpack-utils"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production node ./build.js",
+    "watch": "node ./build.js --dev"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "1.5.4",
+    "webpack-utils": "file:.."
+  },
+  "dependencies": {
+    "express": "4.14.0"
+  }
+}

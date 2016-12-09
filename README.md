@@ -2,8 +2,11 @@
 
 Configuring JS builds is no fun.
 
-See [`test-project/build.js`](test-project/build.js) and
-[`test-project/package.json`](test-project/package.json) for usage.
+For usage see:
+- [`test-project-browser/build.js`](test-project-browser/build.js)
+- [`test-project-browser/package.json`](test-project-browser/package.json)
+- [`test-project-node/build.js`](test-project-node/build.js)
+- [`test-project-node/package.json`](test-project-node/package.json)
 
 ```javascript
 const wu = require('webpack-utils');
@@ -17,16 +20,33 @@ const wu = require('webpack-utils');
 - [`wu.flowPlugin`](lib/flowPlugin.js)
 - [`wu.minifyPlugin`](lib/minifyPlugin.js)
 
-Build this project:
+### Build this project:
+
+Dependencies:
 
 ```sh
 npm install
-# run eslint
-npm run lint
-# run a test build in prod mode
-npm run test && ( cd test-project/dist/ && python -m SimpleHTTPServer; )
-open localhost:8000
-# run a test build in dev mode
-( cd test-project && npm run watch; )
-open localhost:8888
 ```
+
+Linter:
+
+```
+npm run lint
+```
+
+Test a browser build:
+
+```
+# prod mode
+npm run test-browser && ( cd test-project-browser/dist/ && python -m SimpleHTTPServer; )
+# dev mode
+( cd test-project-browser && npm run watch; )
+```
+
+Test a node build:
+
+```
+# prod mode
+npm run test-node
+# dev mode
+( cd test-project-node && npm run watch; )
