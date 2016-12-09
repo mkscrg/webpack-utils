@@ -8,6 +8,7 @@ const moreFlowConfig = {
   ],
 };
 const moreEslintConfig = {
+  env: { browser: true, node: false },
   rules: {
     'react/jsx-filename-extension': 2,
   },

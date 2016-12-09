@@ -8,5 +8,5 @@ import HelloWorld from './HelloWorld';
 
 ReactDOM.render(
   <HelloWorld />,
-  document.getElementById('wutp')
+  document.getElementById('wutp'),
 );
