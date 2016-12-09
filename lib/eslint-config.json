@@ -8,6 +8,13 @@
   },
   "rules": {
     "arrow-parens": [2, "always"],
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }],
     "flowtype/define-flow-type": 2,
     "flowtype/require-valid-file-annotation": [2, "always"],
     "flowtype/space-after-type-colon": [2, "always"],
