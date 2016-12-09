@@ -12,7 +12,6 @@
     "watch": "node ./build.js --dev"
   },
   "devDependencies": {
-    "webpack-node-externals": "1.5.4",
     "webpack-utils": "file:.."
   },
   "dependencies": {

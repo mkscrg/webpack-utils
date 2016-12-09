@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
-const nodeExternals = require('webpack-node-externals');
 const wu = require('webpack-utils');
 
 
@@ -19,7 +18,7 @@ wu.webpackMain(() => ({
     filename: 'index.js',
   },
   target: 'node',
-  externals: [nodeExternals()],
+  externals: [wu.nodeExternals()],
   module: {
     preLoaders: [
       eslintPreLoader,
