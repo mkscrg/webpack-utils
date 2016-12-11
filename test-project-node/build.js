@@ -32,4 +32,5 @@ wu.webpackMain(() => ({
   ],
   eslint: eslintConfig,
   devtool: 'sourcemap',
+  onWatchSuccess: wu.externalCommand('node', ['dist/index.js']),
 }));
