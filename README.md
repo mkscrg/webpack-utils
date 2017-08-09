@@ -1,5 +1,7 @@
 ## webpack-utils
 
+### This project is not maintained, built for webpack-1.x. YMMV
+
 Configuring JS builds is no fun.
 
 For usage see:
